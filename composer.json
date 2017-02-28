@@ -1,0 +1,10 @@
+{
+    "name": "root/jons-code",
+    "description": "A stupid refactor example :)",
+    "license": "MIT",
+    "require": {},
+
+    "autoload": {
+        "psr-4": {"App\\": "app/"}
+    }
+}
