@@ -20,7 +20,7 @@ class Helper
      */
     public function generateFiles($limit = 100000) {
         $state['extensions'] = static::generateExtensions($limit);
-        $state['filename'] = 'filename.' . $state['extensions'][rand(0, $limit)];
+        $state['filename'] = 'filename.' . $state['extensions'][mt_rand(0, $limit)];
 
         return $state;
     }
@@ -36,7 +36,7 @@ class Helper
 
         $extensions = [];
         while($count--) {
-            $extensions[] = base_convert(rand($min, $max), 10, 36);
+            $extensions[] = base_convert(mt_rand($min, $max), 10, 36);
         }
 
         return $extensions;
